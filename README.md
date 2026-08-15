@@ -58,7 +58,6 @@ The model follows a classic Star Schema centered around the transactional fact t
 
 <img width="1009" height="491" alt="CH Data Model" src="https://github.com/user-attachments/assets/f7fcd82f-8618-442c-b045-95150f7289fe" />
 
-
 - Facts_table: Stores central transactional metrics (RevenueAmount, ExpensesAmount) linked via foreign keys (Date, DoctorID, PatientID, ProcedureID, LocationID).
 - Doctor_dim: Contains physician profiles, merged full names, gender, and medical specialties.
 - Patient_dim: Tracks patient identity, merged full names, gender, and date of birth.
