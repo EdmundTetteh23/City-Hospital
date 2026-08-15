@@ -28,7 +28,7 @@ City Hospital lacked a centralized view of its financial and operational perform
 - Demographic & Volume Tracking: Profile physician and patient populations by gender and evaluate monthly patient visit trends to support staffing strategies.
 
 ## Data Pipeline & Architecture
-[ Raw Flat File ] ➔ [ Power Query ETL ] ➔ [ Star Schema Data Model ] ➔ [ Interactive Power BI Report ]
+[Raw Flat File] ➔ [Power Query ETL] ➔ [Star Schema Data Model] ➔ [Interactive Power BI Report]
 
 ## Power Query ETL Steps
 The raw transactional dataset was normalized into 1 Fact Table and 4 Dimension Tables using Power Query to enforce data integrity and improve query performance:
