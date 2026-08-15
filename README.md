@@ -108,6 +108,19 @@ Focused on operational flow, physician workloads, top revenue contributors, and 
 - Demographic Inversion: The physician workforce skews male (52% Male / 48% Female), whereas the patient base skews female (55% Female / 45% Male).
 - Volume-Driven Revenue Drop: Patient visits decline steadily over the year (from 19 visits per month in Q1 to 15 visits per month in Q4), confirming the second-half revenue drop is driven by lower patient volume rather than margin compression.
 
+## Strategic Recommendations
+1. Proactively Plan for the September Dip
+Launch targeted patient outreach campaigns—such as preventative health screenings and routine checkup reminders—in August, ahead of the seasonal trough, rather than reacting after revenue has already fallen.
+
+2. Investigate Heart Bypass Surgery Capacity
+Heart Bypass Surgery yields the highest profit margin per case ($519/case, 31.87% margin). Investigate if surgeon or OR availability is capping volume at 23 cases.
+
+3. Diversify Specialty Revenue
+Continue investing in Cardiology and Neurology to expand their pipelines and reduce financial concentration risk, ensuring the hospital does not remain overly dependent on Dermatology, which currently drives approximately 25% of revenue.
+
+4. Operationalize the Dashboard as a Living Tool
+Establish a daily data refresh cycle and integrate the report into recurring leadership reviews so executive management can track whether seasonal, specialty, and staffing interventions are actively moving the numbers.
+
 ## Tech Stack
 - Data Source: Hospital transaction dataset (CSV/Excel)
 - Transformation: Power Query (data cleaning, type correction, relationship modeling)
