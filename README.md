@@ -6,10 +6,9 @@ An end-to-end financial and operational intelligence solution built for City Hos
 - Project Brief & Problem Statement
 - Data Pipeline & Architecture
 - Data Model & Relationships
-- Dashboards & Visualizations
 - Core DAX Measures & Formulas
+- Dashboards & Visualizations
 - Key Business Insights
-- Business Questions Answered
 - Strategic Recommendations
 - Tech Stack
 - Author
@@ -66,6 +65,14 @@ The model follows a classic Star Schema centered around the transactional fact t
 - Procedure Table: Detail lookup for medical procedure names, categories, and descriptions.
 - Selected Metric: Disconnected parameter table implemented for dynamic parameter selection across visual metrics.
 
+## Core DAX Measures & Formulas
+- Total Revenue = SUM(RevenueAmount)
+- Total Expense = SUM(ExpensesAmount)
+- Total Profit = Total Revenue − Total Expense
+- Profit Margin (%) = Total Profit ÷ Total Revenue × 100
+- Total Doctors = DISTINCTCOUNT(DoctorID)
+- Total Patients = DISTINCTCOUNT(PatientID)
+
 ## Dashboards & Visualizations
 ### Dashboard 1 — Financial Performance & Specialty Analysis
 Tailored to provide leadership with executive visibility into financial trends, category performance, and procedure economics.
@@ -90,15 +97,21 @@ Focused on operational flow, physician workloads, top revenue contributors, and 
 
 ## Key Business Insights
 ### Financial Performance
-•	Overall Profitability: City Hospital generated $273.6K in total revenue against $189.4K in expenses, yielding $84.1K profit at a 30.8% net profit margin.
-•	Revenue Seasonality: Revenue exhibits a seasonal wave. The first half (Jan–Jun) averages approximately $24.0K/month compared to $21.6K/month in the second half (Jul–Dec). September represents the seasonal low point ($20.2K), approximately 20% below the March peak ($25.2K).
-•	Margin Consistency: Margins across all 10 procedures remain tightly bounded between 29.65% (X-Ray) and 31.87% (Heart Bypass Surgery), showing consistent pricing discipline across services.
-•	Specialty Concentration: Dermatology leads all specialties in revenue generation at $68K (~25% of total specialty revenue).
+- Overall Profitability: City Hospital generated $273.6K in total revenue against $189.4K in expenses, yielding $84.1K profit at a 30.8% net profit margin.
+- Revenue Seasonality: Revenue exhibits a seasonal wave. The first half (Jan–Jun) averages approximately $24.0K/month compared to $21.6K/month in the second half (Jul–Dec). September represents the seasonal low point ($20.2K), approximately 20% below the March peak ($25.2K).
+- Margin Consistency: Margins across all 10 procedures remain tightly bounded between 29.65% (X-Ray) and 31.87% (Heart Bypass Surgery), showing consistent pricing discipline across services.
+- Specialty Concentration: Dermatology leads all specialties in revenue generation at $68K (~25% of total specialty revenue).
 
 ### Operational & Workforce Intelligence
-•	Primary Volume Driver: Cardiology is the busiest specialty overall, maintaining both the largest physician staff (15 doctors) and highest patient volume (21 patients).
-•	Capacity Strain in Neurology: Neurology doctors carry a high workload density (18 patients / 13 doctors ≈ 1.38 ratio), nearly identical to Cardiology (1.38 vs 1.40) despite having two fewer physicians on staff.
-•	Demographic Inversion: The physician workforce skews male (52% Male / 48% Female), whereas the patient base skews female (55% Female / 45% Male).
-•	Volume-Driven Revenue Drop: Patient visits decline steadily over the year (from 19 visits per month in Q1 to 15 visits per month in Q4), confirming the second-half revenue drop is driven by lower patient volume rather than margin compression.
+- Primary Volume Driver: Cardiology is the busiest specialty overall, maintaining both the largest physician staff (15 doctors) and highest patient volume (21 patients).
+- Capacity Strain in Neurology: Neurology doctors carry a high workload density (18 patients / 13 doctors ≈ 1.38 ratio), nearly identical to Cardiology (1.38 vs 1.40) despite having two fewer physicians on staff.
+- Demographic Inversion: The physician workforce skews male (52% Male / 48% Female), whereas the patient base skews female (55% Female / 45% Male).
+- Volume-Driven Revenue Drop: Patient visits decline steadily over the year (from 19 visits per month in Q1 to 15 visits per month in Q4), confirming the second-half revenue drop is driven by lower patient volume rather than margin compression.
+
+## Tech Stack
+- Data Source: Hospital transaction dataset (CSV/Excel)
+- Transformation: Power Query (data cleaning, type correction, relationship modeling)
+- Modeling & Metrics: DAX (KPI measures, profit margin, ratios)
+- Visualization: Microsoft PowerBI
 
 
