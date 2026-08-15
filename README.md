@@ -3,13 +3,13 @@ An end-to-end financial and operational intelligence solution built for City Hos
 
 ## Table of Contents
 Overview
-Project Brief & Problem Statement
-Data Pipeline & Architecture
-Data Model & Relationships
-Dashboards & Visualizations
-Core DAX Measures & Formulas
-Key Business Insights
-Business Questions Answered
-Strategic Recommendations
-Tech Stack
-Author
+- Project Brief & Problem Statement
+- Data Pipeline & Architecture
+- Data Model & Relationships
+- Dashboards & Visualizations
+- Core DAX Measures & Formulas
+- Key Business Insights
+- Business Questions Answered
+- Strategic Recommendations
+- Tech Stack
+- Author
