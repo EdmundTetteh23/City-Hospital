@@ -54,4 +54,51 @@ procedure_dim
 3.	Primary Key Enforcement: Removed duplicate rows in dimension tables.
 4.	Column Merging: Concatenated separate first and last name fields into unified Doctors_Name and Patients Name attributes.
 
+Data Model & Relationships
+The model follows a classic Star Schema centered around the transactional fact table, configured with one-to-many (1:*) single-direction filter relationships:
+
+<img width="1366" height="768" alt="CH Data Model" src="https://github.com/user-attachments/assets/87f91f08-9312-43d6-aa73-1c85f87761bb" />
+
+- Facts Table: Stores central transactional metrics (RevenueAmount, ExpensesAmount) linked via foreign keys (Date, DoctorID, PatientID, ProcedureID, LocationID).
+- Doctor Dim: Contains physician profiles, merged full names, gender, and medical specialties.
+- Patient Dim: Tracks patient identity, merged full names, gender, and date of birth.
+- Location Dim: Geographic lookup (City, State, Country, PostalCode).
+- Procedure Table: Detail lookup for medical procedure names, categories, and descriptions.
+- Selected Metric: Disconnected parameter table implemented for dynamic parameter selection across visual metrics.
+
+## Dashboards & Visualizations
+### Dashboard 1 — Financial Performance & Specialty Analysis
+Tailored to provide leadership with executive visibility into financial trends, category performance, and procedure economics.
+
+<img width="605" height="452" alt="Page 1" src="https://github.com/user-attachments/assets/9a1e58a7-d446-4b6d-8dd3-d2b91a5ae2d5" />
+
+- KPI Strip: Total Revenue ($273.6K), Total Expenses ($189.4K), Total Profit ($84.1K), Profit Margin (30.8%), Total Doctors (81), and Total Patients (86).
+- Revenue Trend: Line visual tracking monthly revenue performance across the full reporting period.
+- Category & Specialty Breakdown: Horizontal bar charts comparing revenue generation across medical specialties and procedure categories.
+- Financial Metrics Matrix: Comprehensive breakdown detailing Revenue, Expenses, Profit Margin %, and Transaction Count for every individual procedure.
+- Slicer Panel: Interactive filtering pane for Year, State, Gender of Doctor, and Gender of Patient.
+
+### Dashboard 2 — Workforce & Patient Demographics
+Focused on operational flow, physician workloads, top revenue contributors, and patient demographics.
+
+<img width="606" height="452" alt="Page 2" src="https://github.com/user-attachments/assets/080ee091-d217-4109-9235-3e8874ef4249" />
+
+•	Top Contributors: Ranked visual metrics highlighting top revenue-generating doctors (led by Ava Adams at $24.8K) and top 5 revenue-impacting patients (led by Harper Young at $16.7K).
+•	Specialty Staffing vs. Patient Load: Comparative bar charts mapping doctor headcount against patient volume per specialty.
+•	Demographics: Column chart breakdowns showing full gender distribution across providers, (42 Male / 39 Female) doctors and (47 Female / 39 Male) patients.
+•	Patient Visit Trend: Line chart tracking patient visit volume over time.
+
+## Key Business Insights
+### Financial Performance
+•	Overall Profitability: City Hospital generated $273.6K in total revenue against $189.4K in expenses, yielding $84.1K profit at a 30.8% net profit margin.
+•	Revenue Seasonality: Revenue exhibits a seasonal wave. The first half (Jan–Jun) averages approximately $24.0K/month compared to $21.6K/month in the second half (Jul–Dec). September represents the seasonal low point ($20.2K), approximately 20% below the March peak ($25.2K).
+•	Margin Consistency: Margins across all 10 procedures remain tightly bounded between 29.65% (X-Ray) and 31.87% (Heart Bypass Surgery), showing consistent pricing discipline across services.
+•	Specialty Concentration: Dermatology leads all specialties in revenue generation at $68K (~25% of total specialty revenue).
+
+### Operational & Workforce Intelligence
+•	Primary Volume Driver: Cardiology is the busiest specialty overall, maintaining both the largest physician staff (15 doctors) and highest patient volume (21 patients).
+•	Capacity Strain in Neurology: Neurology doctors carry a high workload density (18 patients / 13 doctors ≈ 1.38 ratio), nearly identical to Cardiology (1.38 vs 1.40) despite having two fewer physicians on staff.
+•	Demographic Inversion: The physician workforce skews male (52% Male / 48% Female), whereas the patient base skews female (55% Female / 45% Male).
+•	Volume-Driven Revenue Drop: Patient visits decline steadily over the year (from 19 visits per month in Q1 to 15 visits per month in Q4), confirming the second-half revenue drop is driven by lower patient volume rather than margin compression.
+
 
