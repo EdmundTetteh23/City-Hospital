@@ -59,11 +59,11 @@ The model follows a classic Star Schema centered around the transactional fact t
 <img width="1009" height="491" alt="CH Data Model" src="https://github.com/user-attachments/assets/f7fcd82f-8618-442c-b045-95150f7289fe" />
 
 
-- Facts Table: Stores central transactional metrics (RevenueAmount, ExpensesAmount) linked via foreign keys (Date, DoctorID, PatientID, ProcedureID, LocationID).
-- Doctor Dim: Contains physician profiles, merged full names, gender, and medical specialties.
-- Patient Dim: Tracks patient identity, merged full names, gender, and date of birth.
-- Location Dim: Geographic lookup (City, State, Country, PostalCode).
-- Procedure Table: Detail lookup for medical procedure names, categories, and descriptions.
+- Facts_table: Stores central transactional metrics (RevenueAmount, ExpensesAmount) linked via foreign keys (Date, DoctorID, PatientID, ProcedureID, LocationID).
+- Doctor_dim: Contains physician profiles, merged full names, gender, and medical specialties.
+- Patient_dim: Tracks patient identity, merged full names, gender, and date of birth.
+- Location_dim: Geographic lookup (City, State, Country, PostalCode).
+- Procedure_dim: Detail lookup for medical procedure names, categories, and descriptions.
 - Selected Metric: Disconnected parameter table implemented for dynamic parameter selection across visual metrics.
 
 ## Core DAX Measures & Formulas
