@@ -53,7 +53,7 @@ procedure_dim
 3.	Primary Key Enforcement: Removed duplicate rows in dimension tables.
 4.	Column Merging: Concatenated separate first and last name fields into unified Doctors_Name and Patients Name attributes.
 
-Data Model & Relationships
+## Data Model & Relationships
 The model follows a classic Star Schema centered around the transactional fact table, configured with one-to-many (1:*) single-direction filter relationships:
 
 <img width="1009" height="491" alt="CH Data Model" src="https://github.com/user-attachments/assets/f7fcd82f-8618-442c-b045-95150f7289fe" />
