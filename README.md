@@ -3,11 +3,11 @@ An end-to-end financial and operational intelligence solution built for City Hos
 
 ## Table of Contents
 - [Overview](#overview)
-- [Project Brief & Problem Statement](#Project-Brief-&-Problem-Statement)
-- [Data Pipeline & Architecture](#Data-Pipeline-&-Architecture)
-- [Data Model & Relationships](#Data-Model-&-Relationships)
-- [Core DAX Measures & Formulas](#Core-DAX-Measures-&-Formulas)
-- [Dashboards & Visualizations](#Dashboards-&-Visualizations)
+- [Project Brief and Problem Statement](#Project-Brief-and-Problem-Statement)
+- [Data Pipeline and Architecture](#Data-Pipeline-and-Architecture)
+- [Data Model and Relationships](#Data-Model-and-Relationships)
+- [Core DAX Measures and Formulas](#Core-DAX-Measures-and-Formulas)
+- [Dashboards and Visualizations](#Dashboards-and-Visualizations)
 - [Key Business Insights](#Key-Business-Insights)
 - [Strategic Recommendations](#Strategic-Recommendations)
 - [Tech Stack](#Tech-Stack)
@@ -17,7 +17,7 @@ An end-to-end financial and operational intelligence solution built for City Hos
 City Hospital has historically lacked a centralized, data-driven system to track operational and financial performance across departments.
 This project establishes a robust business intelligence framework by structuring flat operational files into an optimized relational Star Schema, applying ETL transformations in Power Query, and building intuitive visuals that enable hospital administrators to track high-level KPIs, procedure economics, doctor capacity, and volume trends.
 
-## Project Brief & Problem Statement
+## Project Brief and Problem Statement
 ### Problem Statement
 City Hospital lacked a centralized view of its financial and operational performance. Decisions were traditionally made based on intuition and historical trends, making it difficult to identify revenue trends, evaluate procedure margins, optimize resource allocation, and address capacity bottlenecks.
 
@@ -27,7 +27,7 @@ City Hospital lacked a centralized view of its financial and operational perform
 - Workforce & Operational Capacity: Analyze provider capacity by mapping doctor headcount against patient volume across specialties.
 - Demographic & Volume Tracking: Profile physician and patient populations by gender and evaluate monthly patient visit trends to support staffing strategies.
 
-## Data Pipeline & Architecture
+## Data Pipeline and Architecture
 [Raw Flat File] ➔ [Power Query ETL] ➔ [Star Schema Data Model] ➔ [Interactive Power BI Report]
 
 ## Power Query ETL Steps
@@ -53,7 +53,7 @@ procedure_dim
 3.	Primary Key Enforcement: Removed duplicate rows in dimension tables.
 4.	Column Merging: Concatenated separate first and last name fields into unified Doctors_Name and Patients Name attributes.
 
-## Data Model & Relationships
+## Data Model and Relationships
 The model follows a classic Star Schema centered around the transactional fact table, configured with one-to-many (1:*) single-direction filter relationships:
 
 <img width="1009" height="491" alt="CH Data Model" src="https://github.com/user-attachments/assets/f7fcd82f-8618-442c-b045-95150f7289fe" />
@@ -65,7 +65,7 @@ The model follows a classic Star Schema centered around the transactional fact t
 - Procedure_dim: Detail lookup for medical procedure names, categories, and descriptions.
 - Selected Metric: Disconnected parameter table implemented for dynamic parameter selection across visual metrics.
 
-## Core DAX Measures & Formulas
+## Core DAX Measures and Formulas
 - Total Revenue = SUM(RevenueAmount)
 - Total Expense = SUM(ExpensesAmount)
 - Total Profit = Total Revenue − Total Expense
@@ -73,7 +73,7 @@ The model follows a classic Star Schema centered around the transactional fact t
 - Total Doctors = DISTINCTCOUNT(DoctorID)
 - Total Patients = DISTINCTCOUNT(PatientID)
 
-## Dashboards & Visualizations
+## Dashboards and Visualizations
 ### Dashboard 1 — Financial Performance & Specialty Analysis
 Tailored to provide leadership with executive visibility into financial trends, category performance, and procedure economics.
 
