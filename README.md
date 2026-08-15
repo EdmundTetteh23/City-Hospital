@@ -2,15 +2,15 @@
 An end-to-end financial and operational intelligence solution built for City Hospital, transforming raw transactional data into an interactive, 2-page PowerBI dashboard. This project replaces intuition-based decision-making with evidence based facts for hospital leadership to gain insights into financial performance, specialty profitability, workforce efficiency, and patient demographics.
 
 ## Table of Contents
-- Overview
-- Project Brief & Problem Statement
-- Data Pipeline & Architecture
-- Data Model & Relationships
-- Core DAX Measures & Formulas
-- Dashboards & Visualizations
-- Key Business Insights
-- Strategic Recommendations
-- Tech Stack
+- [Overview](#overview)
+- [Project Brief & Problem Statement](#Project-Brief-&-Problem-Statement)
+- [Data Pipeline & Architecture](#Data-Pipeline-&-Architecture)
+- [Data Model & Relationships](#Data-Model-&-Relationships)
+- [Core DAX Measures & Formulas](#Core-DAX-Measures-&-Formulas)
+- [Dashboards & Visualizations](#Dashboards-&-Visualizations)
+- [Key Business Insights](#Key-Business-Insights)
+- [Strategic Recommendations](#Strategic-Recommendations)
+- [Tech Stack](#Tech-Stack)
 - Author
 
 ## Overview
@@ -56,7 +56,8 @@ procedure_dim
 Data Model & Relationships
 The model follows a classic Star Schema centered around the transactional fact table, configured with one-to-many (1:*) single-direction filter relationships:
 
-<img width="1366" height="768" alt="CH Data Model" src="https://github.com/user-attachments/assets/87f91f08-9312-43d6-aa73-1c85f87761bb" />
+<img width="1009" height="491" alt="CH Data Model" src="https://github.com/user-attachments/assets/f7fcd82f-8618-442c-b045-95150f7289fe" />
+
 
 - Facts Table: Stores central transactional metrics (RevenueAmount, ExpensesAmount) linked via foreign keys (Date, DoctorID, PatientID, ProcedureID, LocationID).
 - Doctor Dim: Contains physician profiles, merged full names, gender, and medical specialties.
